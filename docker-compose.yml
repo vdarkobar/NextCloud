@@ -56,7 +56,7 @@ services:
       - nc
       - db
     restart: always
-    labels:  # use labels only if on the same VM as Traefik (same Docker host)
+#    labels:  # use labels only if on the same VM as Traefik (same Docker host)
       #- "traefik.enable=true"
       #- "traefik.docker.network=proxy"
       #- "traefik.http.routers.nextcloud-secure.entrypoints=websecure"
