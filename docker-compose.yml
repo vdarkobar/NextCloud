@@ -57,10 +57,10 @@ services:
       - db
     restart: always
     labels:  # to test without labels, on different server > 2
-      - "traefik.enable=true"
-      - "traefik.docker.network=proxy"
-      - "traefik.http.routers.nextcloud-secure.entrypoints=websecure"
-      - "traefik.http.routers.nextcloud-secure.rule=Host(`cloud.yourdomain`)"
+      #- "traefik.enable=true"
+      #- "traefik.docker.network=proxy"
+      #- "traefik.http.routers.nextcloud-secure.entrypoints=websecure"
+      #- "traefik.http.routers.nextcloud-secure.rule=Host(`cloud.yourdomain`)"
       #- "traefik.http.routers.nextcloud-secure.service=nextcloud-service" # to test when this section commented out > 1
       #- "traefik.http.services.nextcloud-service.loadbalancer.server.port=80" # to test when this section commented out
     environment:
