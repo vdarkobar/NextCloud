@@ -7,8 +7,9 @@ sudo docker network create nc
 sudo docker network create db
 ```
 ### Clone this git repository
+#### *create folder to store cloned files and cd in to it*
 ```
-cd $(mktemp -d NC-XXX) && git clone https://vdarkobar:2211620c9da5dab0c7bb77e9aeb02087d293b293@github.com/vdarkobar/NextCloud.git .
+git clone https://vdarkobar:2211620c9da5dab0c7bb77e9aeb02087d293b293@github.com/vdarkobar/NextCloud.git .
 ```
 ##### Add passwords and change premissions, *adjust folder name*
 ```
