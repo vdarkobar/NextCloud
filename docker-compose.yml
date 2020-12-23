@@ -15,7 +15,7 @@ services:
     image: mariadb:latest
     container_name: nextcloud-db
     volumes:
-      - nextcloud-db-data:/var/lib/mysql
+      - ./nextcloud-db-data:/var/lib/mysql
     networks:
       - db
     restart: always
@@ -36,7 +36,7 @@ services:
       - db
       - nc
     volumes:
-      - redis:/var/lib/redis
+      - ./redis:/var/lib/redis
 
   nextcloud:
     depends_on:
@@ -78,9 +78,3 @@ networks:
     external: true
   nc:
     external: true
-    
-volumes:
-  nextcloud-db-data:
-    name: nextcloud-db-data
-  redis:
-    name: nextcloud-redis
