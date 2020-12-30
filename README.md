@@ -24,23 +24,6 @@ sudo chown -R root:root secrets/
 ```
 sudo nano docker-compose.yml
 ```
-##### Start
-```
-sudo docker-compose up -d
-```
-##### Log
-```
-sudo docker-compose logs nextcloud-db
-sudo docker-compose logs nextcloud
-sudo docker logs -tf --tail="50" nextcloud-db
-sudo docker logs -tf --tail="50" nextcloud
-```
-##### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
-```
-sudo nano /home/darko/NextCloud/files/config/config.php
-# change to:
-'overwrite.cli.url' => 'https://cloud.home-network.me', 'overwritehost' => 'cloud.home-network.me', 'overwriteprotocol' => 'https',
-```
   
 ##### Dynamic config
 ```
@@ -81,4 +64,22 @@ http:
         servers:
           - url: "http://local-ip:9980" # adjust ip and port nummber
           
+```
+  
+##### Start
+```
+sudo docker-compose up -d
+```
+##### Log
+```
+sudo docker-compose logs nextcloud-db
+sudo docker-compose logs nextcloud
+sudo docker logs -tf --tail="50" nextcloud-db
+sudo docker logs -tf --tail="50" nextcloud
+```
+##### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
+```
+sudo nano /home/darko/NextCloud/files/config/config.php
+# change to:
+'overwrite.cli.url' => 'https://cloud.home-network.me', 'overwritehost' => 'cloud.home-network.me', 'overwriteprotocol' => 'https',
 ```
