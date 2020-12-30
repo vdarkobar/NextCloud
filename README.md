@@ -17,6 +17,7 @@ echo | openssl rand -base64 48 > secrets/mysql_root_password.secret
 echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret
 echo "admin" > secrets/nc_admin_user.secret
 echo | openssl rand -base64 20 > secrets/nc_admin_password.secret
+TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env
 sudo chown -R root:root secrets/
 ```
 ##### *Change container names, labels and volume name, inside docker-compose file, if multiple instances are planed.*
