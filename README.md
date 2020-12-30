@@ -29,6 +29,8 @@ sudo docker-compose up -d
 ```
 ##### Log
 ```
+sudo docker-compose logs nextcloud-db
+sudo docker-compose logs nextcloud
 sudo docker logs -tf --tail="50" nextcloud-db
 sudo docker logs -tf --tail="50" nextcloud
 ```
