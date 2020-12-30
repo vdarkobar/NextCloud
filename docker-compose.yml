@@ -74,7 +74,7 @@ services:
       - NEXTCLOUD_TRUSTED_DOMAINS=cloud.$DOMAINNAME $LOCALIP # space separated list
 
   ## Collabora - Document Server
-  # Connect to Collabora app with: https://code.$DOMAINNAME
+  # Connect NextCloud to Collabora app with: https://code.$DOMAINNAME
   # Admin console at https://<CODE-domain>/loleaflet/dist/admin/admin.html
   code:
     container_name: code
