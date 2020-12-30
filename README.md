@@ -41,3 +41,44 @@ sudo nano /home/darko/NextCloud/files/config/config.php
 # change to:
 'overwrite.cli.url' => 'https://cloud.home-network.me', 'overwritehost' => 'cloud.home-network.me', 'overwriteprotocol' => 'https',
 ```
+  
+##### Dynamic config
+```
+http:
+
+  # All routers:
+  routers:
+
+    # NextCloud service router
+    nextcloud-router:
+      service: nextcloud-service
+      middlewares:
+      entryPoints:
+        - "websecure"
+      rule: "Host(`cloud.domain`)"  # adjust domain
+
+    # Collabora service router
+    collabora-router:
+      service: collabora-service
+      middlewares:
+      entryPoints:
+        - "websecure"
+      rule: "Host(`code.domain`)" # adjust domain
+
+
+  # All services:
+  services:
+
+    # Nextcloud service
+    nextcloud-service:
+      loadBalancer:
+        servers:
+          - url: "http://local-ip:8585" # adjust ip and port nummber
+
+    # Collabora service
+    collabora-service:
+      loadBalancer:
+        servers:
+          - url: "http://local-ip:9980" # adjust ip and port nummber
+          
+```
