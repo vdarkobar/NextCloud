@@ -23,7 +23,7 @@ services:
       - mysql_root_password
       - nc_mysql_password
     environment:
-      - TZ=Germany/Berlin
+      - TZ=$TZ
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password
       - MYSQL_DATABASE=db
       - MYSQL_USER=dbuser
@@ -71,7 +71,7 @@ services:
       - MYSQL_PASSWORD_FILE=/run/secrets/nc_mysql_password
       - NEXTCLOUD_ADMIN_PASSWORD_FILE=/run/secrets/nc_admin_password
       - NEXTCLOUD_ADMIN_USER_FILE=/run/secrets/nc_admin_user
-      - NEXTCLOUD_TRUSTED_DOMAINS=cloud.domain.com local_IP_address # space separated list
+      - NEXTCLOUD_TRUSTED_DOMAINS=cloud.$DOMAINNAME $LOCALIP # space separated list
 
 networks:
   db:
