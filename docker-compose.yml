@@ -6,9 +6,9 @@ secrets:
   nc_mysql_password:
     file: ./secrets/nc_mysql_password.secret
   nc_admin_user:
-    file: ./nc_admin_user.secret
+    file: ./secrets/nc_admin_user.secret
   nc_admin_password:
-    file: ./nc_admin_password.secret
+    file: ./secrets/nc_admin_password.secret
 
 services:
   db:
