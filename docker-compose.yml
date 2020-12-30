@@ -73,6 +73,44 @@ services:
       - NEXTCLOUD_ADMIN_USER_FILE=/run/secrets/nc_admin_user
       - NEXTCLOUD_TRUSTED_DOMAINS=cloud.$DOMAINNAME $LOCALIP # space separated list
 
+  ## Collabora - Document Server
+  # Connect to Collabora app with: https://code.$DOMAINNAME
+  # Admin console at https://<CODE-domain>/loleaflet/dist/admin/admin.html
+  code:
+    container_name: code
+    image: collabora/code:latest
+    restart: always
+    networks:
+      - nc
+    ports:
+      - 9980:9980
+#    security_opt:
+#      - no-new-privileges:true
+    cap_add:
+      - MKNOD
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - username=$MY_USERNAME
+      - password=$MY_PASSWORD
+      - domain=cloud.$DOMAINNAME #$MY_CODE_DOMAIN #<your-NEXTCLOUD-dot-escaped-domain>
+      - VIRTUAL_HOST=code.$DOMAINNAME
+      - LETSENCRYPT_HOST=code.$DOMAINNAME
+#      - server_name=code.$DOMAINNAME
+      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
+
+#    labels:
+#      - "traefik.enable=true"
+#      ## HTTP Routers
+#      - "traefik.http.routers.code-rtr.entrypoints=https"
+#      - "traefik.http.routers.code-rtr.rule=Host(`code.$DOMAINNAME`)"
+#      ## Middlewares
+#      - "traefik.http.routers.code-rtr.middlewares=secure-headers@file"
+#      ## HTTP Services
+#      - "traefik.http.routers.code-rtr.service=code-svc"
+#      - "traefik.http.services.code-svc.loadbalancer.server.port=9980"
+
 networks:
   db:
     external: true
