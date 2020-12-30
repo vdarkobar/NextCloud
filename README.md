@@ -62,7 +62,7 @@ http:
     collabora-service:
       loadBalancer:
         servers:
-          - url: "http://local-ip:9980" # adjust ip and port nummber
+          - url: "http://local-ip:9980" # adjust ip (fixed port)
           
 ```
   
