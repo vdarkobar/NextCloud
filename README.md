@@ -1,5 +1,5 @@
 # NextCloud
-## deploy NextCloud
+deploy NextCloud
 
 ##### Create docker networks (*if not already created*)
 ```
