@@ -1,7 +1,7 @@
 # NextCloud
 deploy NextCloud
 
-##### Create docker networks (*if not already created*)
+### Create docker networks (*if not already created*)
 ```
 sudo docker network create nc
 sudo docker network create db
