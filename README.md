@@ -20,9 +20,12 @@ echo | openssl rand -base64 20 > secrets/nc_admin_password.secret
 TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env
 sudo chown -R root:root secrets/
 ```
-##### *Change container names, labels and volume name, inside docker-compose file, if multiple instances are planed.*
+##### Adjust if necessary, *if multiple instances are planed.*
 ```
 sudo nano docker-compose.yml
+```
+```
+sudo nano .env
 ```
   
 ##### Dynamic config
