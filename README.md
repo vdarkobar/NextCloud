@@ -1,17 +1,17 @@
 # NextCloud
 deploy NextCloud
 
-##### Create docker networks (*if not already created*)
+#### Create docker networks (*if not already created*)
 ```
 sudo docker network create nc
 sudo docker network create db
 ```
-##### Clone this git repository
+#### Clone this git repository
 ```
 echo -n "Enter directory name: "; read NAME; mkdir -p "$NAME"; cd "$NAME" \
 && git clone https://vdarkobar:2211620c9da5dab0c7bb77e9aeb02087d293b293@github.com/vdarkobar/NextCloud.git .
 ```
-##### Add passwords and change premissions (bash)
+#### Add passwords and change premissions (bash)
 ```
 echo | openssl rand -base64 48 > secrets/mysql_root_password.secret
 echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret
@@ -20,7 +20,7 @@ echo | openssl rand -base64 20 > secrets/nc_admin_password.secret
 TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env
 sudo chown -R root:root secrets/
 ```
-##### Adjust if necessary, *if multiple instances are planed.*
+#### Adjust if necessary, *if multiple instances are planed.*
 ```
 sudo nano docker-compose.yml
 ```
@@ -28,7 +28,7 @@ sudo nano docker-compose.yml
 sudo nano .env
 ```
   
-##### Dynamic config
+#### Dynamic config
 ```
 http:
 
@@ -69,18 +69,18 @@ http:
           
 ```
   
-##### Start
+#### Start
 ```
 sudo docker-compose up -d
 ```
-##### Log
+#### Log
 ```
 sudo docker-compose logs nextcloud-db
 sudo docker-compose logs nextcloud
 sudo docker logs -tf --tail="50" nextcloud-db
 sudo docker logs -tf --tail="50" nextcloud
 ```
-##### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
+#### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
 sudo nano /home/darko/NextCloud/files/config/config.php
 # change to:
