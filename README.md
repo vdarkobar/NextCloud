@@ -44,7 +44,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`cloud.domain`)"  # adjust domain
+      rule: "Host(`cloud.domain`)"  # adjust domain name
 
     # Collabora service router
     collabora-router:
@@ -52,7 +52,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`code.domain`)" # adjust domain
+      rule: "Host(`code.domain`)" # adjust domain name
 
 
   # All services:
@@ -68,7 +68,7 @@ http:
     collabora-service:
       loadBalancer:
         servers:
-          - url: "http://local-ip:9980" # adjust ip (fixed port)
+          - url: "http://local-ip:9980" # adjust ip and port nummber
           
 ```
   
