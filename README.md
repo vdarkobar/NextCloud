@@ -31,7 +31,7 @@ sudo nano docker-compose.yml
 sudo nano .env
 ```
   
-### Dynamic config
+### Dynamic config *(Traefik VM)*
 ```
 http:
 
