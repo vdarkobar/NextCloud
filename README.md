@@ -4,7 +4,7 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
 </p>  
   
-### Create docker networks (*if not already created*)
+### Create docker networks
 ```
 sudo docker network create nc
 sudo docker network create db
