@@ -14,7 +14,8 @@ sudo docker network create db
 RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
 ```
-### Add passwords and change premissions (bash)
+### Add passwords and change premissions
+*Only works once, use bash*
 ```
 echo | openssl rand -base64 48 > secrets/mysql_root_password.secret
 echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret
