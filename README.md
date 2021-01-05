@@ -50,6 +50,18 @@ sudo chmod -R 600 secrets/
 sudo nano docker-compose.yml
 ```
   
+### Start
+```
+sudo docker-compose up -d
+```
+### Log
+```
+sudo docker-compose logs nextcloud-db
+sudo docker-compose logs nextcloud
+sudo docker logs -tf --tail="50" nextcloud-db
+sudo docker logs -tf --tail="50" nextcloud
+```
+  
 ### Dynamic config *(Traefik VM)*
 ```
 http:
@@ -91,17 +103,6 @@ http:
           
 ```
   
-### Start
-```
-sudo docker-compose up -d
-```
-### Log
-```
-sudo docker-compose logs nextcloud-db
-sudo docker-compose logs nextcloud
-sudo docker logs -tf --tail="50" nextcloud-db
-sudo docker logs -tf --tail="50" nextcloud
-```
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
 sudo nano /home/<USER>/NextCloud/files/config/config.php
