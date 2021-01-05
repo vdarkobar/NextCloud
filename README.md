@@ -11,8 +11,8 @@ sudo docker network create db
 ```
 ### Clone this git repository
 ```
-echo -n "Enter directory name: "; read NAME; mkdir -p "$NAME"; cd "$NAME" \
-&& git clone https://github.com/vdarkobar/NextCloud.git .
+echo -n "Enter directory name: "; read NAME; mkdir -p "$NAME"; \
+cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
 ```
 ### Add passwords and change premissions (bash)
 ```
@@ -44,7 +44,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`cloud.domain`)"  # adjust domain name
+      rule: "Host(`cloud.example.com`)"  # adjust domain name
 
     # Collabora service router
     collabora-router:
@@ -52,7 +52,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`code.domain`)" # adjust domain name
+      rule: "Host(`cloud.example.com`)" # adjust domain name
 
 
   # All services:
