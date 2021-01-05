@@ -14,22 +14,40 @@ sudo docker network create db
 RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
 ```
-### Add passwords and change premissions
+  
+#### *Decide what you will use for*:
+```
+Time Zone,
+Domain name,
+Local IP Address,
+NextCloud Admin username,
+Collabora username,
+```
+  
+### Select and run all at once. Enter required data:
 *Only works once, use bash*
 ```
-echo | openssl rand -base64 48 > secrets/mysql_root_password.secret
-echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret
-echo "admin" > secrets/nc_admin_user.secret
-echo | openssl rand -base64 20 > secrets/nc_admin_password.secret
-TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env
-sudo chown -R root:root secrets/
+RED='\033[0;31m'
+echo -ne "${RED}Enter Time Zone: "; read TZONE; \
+echo -ne "${RED}Enter Domain name: "; read DNAME; \
+echo -ne "${RED}Enter Local IP Address: "; read LIP; \
+echo -ne "${RED}Enter NextCloud Admin username: "; read NCUNAME; \
+echo -ne "${RED}Enter Collabora username: "; read CUNAME; \
+sed -i "s|01|${TZONE}|" .env && \
+sed -i "s|02|${DNAME}|" .env && \
+sed -i "s|03|${LIP}|" .env && \
+echo ${NCUNAME} > secrets/nc_admin_user.secret && \
+sed -i "s|04|${CUNAME}|" .env && \
+echo | openssl rand -base64 20 > secrets/nc_admin_password.secret && \
+TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env && \
+echo | openssl rand -base64 48 > secrets/mysql_root_password.secret && \
+echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret && \
+sudo chown -R root:root secrets/ && \
+sudo chmod -R 600 secrets/
 ```
 ### Adjust if necessary, *if multiple instances are planed.*
 ```
 sudo nano docker-compose.yml
-```
-```
-sudo nano .env
 ```
   
 ### Dynamic config *(Traefik VM)*
