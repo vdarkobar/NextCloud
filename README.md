@@ -1,7 +1,7 @@
 # NextCloud
   
 <p align="left">
-  <a href="https://github.com/vdarkobar/Home_Lab">Home</a>
+  <a href="https://github.com/vdarkobar/Home_Cloud">Home</a>
 </p>  
   
 ### Create docker networks (*if not already created*)
@@ -85,7 +85,7 @@ sudo docker logs -tf --tail="50" nextcloud
 ```
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
-sudo nano /home/darko/NextCloud/files/config/config.php
+sudo nano /home/<USER>/NextCloud/files/config/config.php
 # change to:
-'overwrite.cli.url' => 'https://cloud.home-network.me', 'overwritehost' => 'cloud.home-network.me', 'overwriteprotocol' => 'https',
+'overwrite.cli.url' => 'https://cloud.example.com', 'overwritehost' => 'cloud.example.com', 'overwriteprotocol' => 'https',
 ```
