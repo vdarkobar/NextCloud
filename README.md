@@ -11,7 +11,7 @@ sudo docker network create db
 ```
 ### Clone this git repository
 ```
-echo -n "Enter directory name: "; read NAME; mkdir -p "$NAME"; \
+RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
 ```
 ### Add passwords and change premissions (bash)
