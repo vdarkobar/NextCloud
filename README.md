@@ -4,7 +4,7 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
 </p>  
   
-Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and use domain or subdomain for your WordPress.
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and set domain or subdomain for your WordPress.
 ```
     A | example.com | YOUR WAN IP
 ```
@@ -12,7 +12,6 @@ or:
 ```
     CNAME | cloud | @ (or example.com)
 ```
-*docker-compose file predefined to use subdomain: cloud*
 
 ---
 
@@ -72,6 +71,8 @@ sudo docker logs -tf --tail="50" nextcloud
 ```
   
 ### Dynamic config *(Traefik VM)*
+*create file: service_name.yml in Traefik: /data/configurations/ folder for routing and to get a free SSL certificate.*
+
 ```
 http:
 
