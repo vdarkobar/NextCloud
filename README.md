@@ -119,6 +119,9 @@ http:
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
 sudo nano /home/<USER>/NextCloud/files/config/config.php
-# change to:
+# change to (domain):
+'overwrite.cli.url' => 'https://example.com', 'overwritehost' => 'example.com', 'overwriteprotocol' => 'https',
+# or (subdomain):
 'overwrite.cli.url' => 'https://cloud.example.com', 'overwritehost' => 'cloud.example.com', 'overwriteprotocol' => 'https',
+
 ```
