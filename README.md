@@ -4,9 +4,13 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
 </p>  
   
-Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add: *cloud* subdomain, pointing to your root domain.
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and use domain or subdomain for your WordPress.
 ```
-    CNAME | cloud | @ (or example.com)
+    A | example.com | YOUR WAN IP
+```
+or:
+```
+    CNAME | blog | @ (or example.com)
 ```
 
 ---
