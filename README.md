@@ -4,9 +4,9 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
 </p>  
   
-Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add: *cloud* subdomain, pointing to your root domain (@ for the host).  
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add: *cloud* subdomain, pointing to your root domain.
 ```
-    CNAME | * | @ (or example.com)
+    CNAME | cloud | @ (or example.com)
 ```
   
 ### Create docker networks
