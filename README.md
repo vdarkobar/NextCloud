@@ -11,7 +11,7 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add: *cloud*
 
 ---
 
-### Create docker networks
+### Create Docker networks
 ```
 sudo docker network create nc
 sudo docker network create db
