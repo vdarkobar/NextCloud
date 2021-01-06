@@ -85,7 +85,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`cloud.example.com`)"  # adjust domain name
+      rule: "Host(`example.com`)"  # adjust domain or use subdomain (cloud.example.com)
 
     # Collabora service router
     collabora-router:
@@ -93,7 +93,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`cloud.example.com`)" # adjust domain name
+      rule: "Host(`office.example.com`)" # adjust domain, subdomain already set to: office in docker-compose
 
 
   # All services:
