@@ -10,9 +10,9 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and use domain o
 ```
 or:
 ```
-    CNAME | blog | @ (or example.com)
+    CNAME | cloud | @ (or example.com)
 ```
-
+docker-compose.yml predefined to use: cloud.$DOMAINAME
 ---
 
 ### Create Docker networks
