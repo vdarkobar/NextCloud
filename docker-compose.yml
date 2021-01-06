@@ -74,10 +74,10 @@ services:
       - NEXTCLOUD_TRUSTED_DOMAINS=cloud.$DOMAINNAME $LOCALIP # space separated list
 
   ## Collabora - Document Server
-  # Connect NextCloud to Collabora app with: https://code.DOMAINNAME
-  # Admin console at https://<CODE-domain>/loleaflet/dist/admin/admin.html
+  # Connect NextCloud to Collabora app with: https://office.DOMAINNAME
+  # Admin console at https://<office-domain>/loleaflet/dist/admin/admin.html
   code:
-    container_name: code
+    container_name: office
     image: collabora/code:latest
     restart: always
     networks:
@@ -94,22 +94,22 @@ services:
     environment:
       - username=$MY_USERNAME
       - password=$MY_PASSWORD
-      - domain=cloud.$DOMAINNAME #$MY_CODE_DOMAIN #<your-NEXTCLOUD-dot-escaped-domain>
-      - VIRTUAL_HOST=code.$DOMAINNAME
-      - LETSENCRYPT_HOST=code.$DOMAINNAME
-#      - server_name=code.$DOMAINNAME
+      - domain=office.$DOMAINNAME #$MY_OFFICE_DOMAIN #<your-NEXTCLOUD-dot-escaped-domain>
+      - VIRTUAL_HOST=office.$DOMAINNAME
+      - LETSENCRYPT_HOST=office.$DOMAINNAME
+#      - server_name=office.$DOMAINNAME
       - extra_params=--o:ssl.enable=false --o:ssl.termination=true
 
 #    labels:
 #      - "traefik.enable=true"
 #      ## HTTP Routers
-#      - "traefik.http.routers.code-rtr.entrypoints=https"
-#      - "traefik.http.routers.code-rtr.rule=Host(`code.$DOMAINNAME`)"
+#      - "traefik.http.routers.office-rtr.entrypoints=https"
+#      - "traefik.http.routers.office-rtr.rule=Host(`office.$DOMAINNAME`)"
 #      ## Middlewares
-#      - "traefik.http.routers.code-rtr.middlewares=secure-headers@file"
+#      - "traefik.http.routers.office-rtr.middlewares=secure-headers@file"
 #      ## HTTP Services
-#      - "traefik.http.routers.code-rtr.service=code-svc"
-#      - "traefik.http.services.code-svc.loadbalancer.server.port=9980"
+#      - "traefik.http.routers.office-rtr.service=office-svc"
+#      - "traefik.http.services.office-svc.loadbalancer.server.port=9980"
 
 networks:
   db:
