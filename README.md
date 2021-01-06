@@ -12,7 +12,7 @@ or:
 ```
     CNAME | cloud | @ (or example.com)
 ```
-docker-compose.yml predefined to use: cloud.$DOMAINAME
+*docker-compose file predefined to use subdomain: cloud*
 
 ---
 
