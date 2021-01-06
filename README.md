@@ -12,7 +12,10 @@ or:
 ```
     CNAME | cloud | @ (or example.com)
 ```
-
+add subdomain for Collabora Office:
+```
+    CNAME | office | @ (or example.com)
+```
 ---
 
 ### Create Docker networks
