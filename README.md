@@ -53,9 +53,6 @@ sudo chown -R root:root secrets/ && \
 sudo chmod -R 600 secrets/
 ```
 ### Adjust if necessary, *if multiple instances are planed.*
-```
-sudo nano docker-compose.yml
-```
   
 ### Start
 ```
