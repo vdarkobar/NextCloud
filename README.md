@@ -4,6 +4,11 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
 </p>  
   
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add individual subdomains, for all services, pointing to your root domain (@ for the host).  
+```
+    CNAME | * | @ (or example.com)
+```
+  
 ### Create docker networks
 ```
 sudo docker network create nc
