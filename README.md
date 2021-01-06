@@ -21,7 +21,7 @@ Time Zone,
 Domain name,
 Local IP Address,
 NextCloud Admin username,
-Collabora username,
+Collabora username.
 ```
   
 ### Select and run all at once. Enter required data:
