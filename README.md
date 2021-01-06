@@ -16,7 +16,7 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and add: *cloud*
 sudo docker network create nc
 sudo docker network create db
 ```
-### Clone this git repository
+### Clone NextCloud git repository
 ```
 RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
