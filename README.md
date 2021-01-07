@@ -18,12 +18,12 @@ Add subdomain for Collabora Office:
 ```
 ---
 
-### Create Docker networks
+### Create Docker networks:
 ```
 sudo docker network create nc
 sudo docker network create db
 ```
-### Clone NextCloud git repository
+### Clone NextCloud git repository:
 ```
 RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
@@ -59,13 +59,13 @@ echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret && \
 sudo chown -R root:root secrets/ && \
 sudo chmod -R 600 secrets/
 ```
-### Adjust if necessary, *if multiple instances are planed.*
+### Adjust if necessary, *if multiple instances are planed.*:
   
-### Start
+### Start:
 ```
 sudo docker-compose up -d
 ```
-### Log
+### Log:
 ```
 sudo docker-compose logs nextcloud-db
 sudo docker-compose logs nextcloud
@@ -73,7 +73,7 @@ sudo docker logs -tf --tail="50" nextcloud-db
 sudo docker logs -tf --tail="50" nextcloud
 ```
   
-### Dynamic config *(Traefik VM)*
+### Dynamic config *(Traefik VM)*:
 *create file: service_name.yml in Traefik: /data/configurations/ folder for routing and to get a free SSL certificate.*
 
 ```
@@ -115,7 +115,7 @@ http:
           - url: "http://local-ip:9980" # adjust ip and port nummber
           
 ```
-### Middlewares *(Traefik VM)*
+### Middlewares *(Traefik VM)*:
 Add to: middlewares.yml in Traefik: /data/configurations/ for non-www to www redirect (if domain name is used instead of subdomain).
 ```
 http:
@@ -130,7 +130,7 @@ http:
         replacement: "https://www.domain1/${1}"
 ```  
     
-### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
+#### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
 sudo nano /home/<USER>/NextCloud/files/config/config.php
 # change to (domain):
