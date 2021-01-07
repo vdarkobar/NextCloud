@@ -129,8 +129,7 @@ http:
         regex: "^https://domain1/(.*)"
         replacement: "https://www.domain1/${1}"
 ```  
-  
-  
+    
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
 sudo nano /home/<USER>/NextCloud/files/config/config.php
