@@ -120,7 +120,7 @@ Add to: middlewares.yml in Traefik: /data/configurations/ for non-www to www red
 ```
 http:
 
-  # All middlewares:
+  # All middlewares
   middlewares:
   
     # WWW - Redirect1
@@ -128,7 +128,8 @@ http:
       redirectRegex:
         regex: "^https://domain1/(.*)"
         replacement: "https://www.domain1/${1}"
-```
+```  
+  
   
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
