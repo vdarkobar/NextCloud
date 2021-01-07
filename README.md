@@ -115,6 +115,20 @@ http:
           - url: "http://local-ip:9980" # adjust ip and port nummber
           
 ```
+### Middlewares *(Traefik VM)*
+Add to: middlewares.yml in Traefik: /data/configurations/ for non-www to www redirect (if domain name is used instead subdomain).
+```
+http:
+
+  # All middlewares:
+  middlewares:
+  
+    # WWW - Redirect1
+    www-redirect1:
+      redirectRegex:
+        regex: "^https://domain1/(.*)"
+        replacement: "https://www.domain1/${1}"
+```
   
 ### NextCloud - slow login, edit: *'overwrite.cli.url' => ...*
 ```
