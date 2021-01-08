@@ -14,7 +14,7 @@ or:
 ```
 Add subdomain for Collabora Office:
 ```
-    CNAME | office | @ (or example.com)
+    CNAME | code | @ (or example.com)
 ```
 ---
 
