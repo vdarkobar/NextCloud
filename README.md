@@ -42,6 +42,7 @@ Collabora username.
 *Only works once, use bash*
 ```
 RED='\033[0;31m'
+clear
 echo -ne "${RED}Enter Time Zone: "; read TZONE; \
 echo -ne "${RED}Enter Domain name: "; read DNAME; \
 echo -ne "${RED}Enter Local IP Address: "; read LIP; \
