@@ -57,6 +57,7 @@ TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env && \
 echo | openssl rand -base64 48 > secrets/mysql_root_password.secret && \
 echo | openssl rand -base64 20 > secrets/nc_mysql_password.secret && \
 sudo chown -R root:root secrets/ && \
+rm README.md && \
 sudo chmod -R 600 secrets/
 ```
 ### Adjust if necessary, *if multiple instances are planed.*:
