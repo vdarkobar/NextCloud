@@ -71,8 +71,10 @@ sudo docker-compose up -d
 ```
 sudo docker-compose logs nextcloud-db
 sudo docker-compose logs nextcloud
+sudo docker-compose logs code
 sudo docker logs -tf --tail="50" nextcloud-db
 sudo docker logs -tf --tail="50" nextcloud
+sudo docker logs -tf --tail="50" code
 ```
   
 ### Dynamic config *(Traefik VM)*:
