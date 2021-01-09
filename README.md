@@ -18,7 +18,7 @@ or:
     A | example.com | YOUR WAN IP
 ```
 ```
-    CNAME | example | @ (or example.com)
+    CNAME | subdomain | @ (or example.com)
 ```
 Add subdomain for Collabora Office:
 ```
