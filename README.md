@@ -38,6 +38,7 @@ cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
 ```
 Time Zone,
 Domain name,
+Subdomain (if planned),
 Local IP Address,
 NextCloud Admin username,
 Collabora username.
@@ -99,7 +100,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`cloud.example.com`)" # if using subdomain
+      rule: "Host(`example.example.com`)" # if using subdomain
 #      rule: "Host(`example.com`) || Host(`www.example.com`)" # if using domain, non-www to www-redirect
 
     # Collabora service router
