@@ -103,7 +103,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`example.example.com`)" # if using subdomain
+      rule: "Host(`subdomain.example.com`)" # if using subdomain
 #      rule: "Host(`example.com`) || Host(`www.example.com`)" # if using domain, non-www to www-redirect
 
     # Collabora service router
