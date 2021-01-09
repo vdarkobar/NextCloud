@@ -50,14 +50,16 @@ RED='\033[0;31m'
 clear
 echo -ne "${RED}Enter Time Zone: "; read TZONE; \
 echo -ne "${RED}Enter Domain name: "; read DNAME; \
+echo -ne "${RED}Enter Subdomain with . (dot) at the end, skip for no Subdomain: "; read SDNAME; \
 echo -ne "${RED}Enter Local IP Address: "; read LIP; \
 echo -ne "${RED}Enter NextCloud Admin username: "; read NCUNAME; \
 echo -ne "${RED}Enter Collabora username: "; read CUNAME; \
 sed -i "s|01|${TZONE}|" .env && \
 sed -i "s|02|${DNAME}|" .env && \
-sed -i "s|03|${LIP}|" .env && \
+sed -i "s|03|${SDNAME}|" .env && \
+sed -i "s|04|${LIP}|" .env && \
 echo ${NCUNAME} > secrets/nc_admin_user.secret && \
-sed -i "s|04|${CUNAME}|" .env && \
+sed -i "s|05|${CUNAME}|" .env && \
 echo | openssl rand -base64 20 > secrets/nc_admin_password.secret && \
 TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env && \
 echo | openssl rand -base64 48 > secrets/mysql_root_password.secret && \
@@ -66,7 +68,7 @@ sudo chown -R root:root secrets/ && \
 rm README.md && \
 sudo chmod -R 600 secrets/
 ```
-### Adjust if necessary, *if multiple instances are planed.*:
+### Adjust if necessary, *if multiple instances are planed.*: !!!!!!!!!cont names
   
 ### Start:
 ```
