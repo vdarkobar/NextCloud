@@ -15,6 +15,9 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a> and set domain or
 ```
 or:
 ```
+    A | example.com | YOUR WAN IP
+```
+```
     CNAME | example | @ (or example.com)
 ```
 Add subdomain for Collabora Office:
