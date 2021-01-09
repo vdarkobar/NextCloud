@@ -105,7 +105,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`office.example.com`)" # adjust domain, subdomain already set to: office in docker-compose
+      rule: "Host(`code.example.com`)" # adjust domain, subdomain already set to: office in docker-compose
 
 
   # All services:
