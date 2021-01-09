@@ -54,7 +54,7 @@ RED='\033[0;31m'
 clear
 echo -ne "${RED}Enter Time Zone: "; read TZONE; \
 echo -ne "${RED}Enter Domain name: "; read DNAME; \
-echo -ne "${RED}Enter Subdomain with . (dot) at the end, skip for no Subdomain: "; read SDNAME; \
+echo -ne "${RED}Enter Subdomain with . (dot) at the end, just press Enter for no Subdomain: "; read SDNAME; \
 echo -ne "${RED}Enter Local IP Address: "; read LIP; \
 echo -ne "${RED}Enter NextCloud Admin username: "; read NCUNAME; \
 echo -ne "${RED}Enter Collabora username: "; read CUNAME; \
