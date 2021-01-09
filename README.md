@@ -136,11 +136,11 @@ http:
   # All middlewares
   middlewares:
   
-    # WWW - Redirect1
-    www-redirect1:
+    # WWW-Redirect
+    example-com-www-redirect: # any name
       redirectRegex:
-        regex: "^https://domain1/(.*)"
-        replacement: "https://www.domain1/${1}"
+        regex: "^https://example.com/(.*)"
+        replacement: "https://www.example.com/${1}"
 ```  
   
 ### Follow <a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#edit-configphp-file">this link</a> for additional NextCloud settings.
