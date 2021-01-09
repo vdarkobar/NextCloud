@@ -129,7 +129,7 @@ http:
 ### Middlewares *(Traefik VM)*:
 Add to: *middlewares.yml* in Traefik: */data/configurations/* for non-www to www redirect  
   
-*If using domain, non-www to www-redirect
+* *If using domain, non-www to www-redirect*
 ```
 http:
 
