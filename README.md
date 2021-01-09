@@ -72,7 +72,7 @@ sudo chown -R root:root secrets/ && \
 rm README.md && \
 sudo chmod -R 600 secrets/
 ```
-### Adjust if necessary, *if multiple instances are planed.*: !!!!!!!!!cont names
+#### *Change container names, if multiple instances are planed.*
   
 ### Start:
 ```
