@@ -6,6 +6,7 @@
   <a href="https://github.com/vdarkobar/WordPress#wordpress">WordPress</a> |
   <a href="https://github.com/vdarkobar/Ghost-blog">Ghost</a> |
   <a href="https://github.com/vdarkobar/Portainer">Joomla</a>  
+  <br><br>
 </p>  
   
 Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and set domain or subdomain for your WordPress.
