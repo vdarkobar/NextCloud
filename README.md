@@ -55,7 +55,7 @@ clear
 echo -ne "${RED}Enter Time Zone: "; read TZONE; \
 echo -ne "${RED}Enter Domain name: "; read DNAME; \
 echo -ne "${RED}Enter Subdomain with . (dot) at the end, or just press Enter to default to Domain name: "; read SDNAME; \
-echo -ne "${RED}Enter Local IP Address: "; read LIP; \
+echo -ne "${RED}Enter Server(VM) Local IP Address: "; read LIP; \
 echo -ne "${RED}Enter NextCloud Admin username: "; read NCUNAME; \
 echo -ne "${RED}Enter Collabora username: "; read CUNAME; \
 sed -i "s|01|${TZONE}|" .env && \
