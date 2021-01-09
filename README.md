@@ -1,7 +1,11 @@
 # NextCloud
   
 <p align="left">
-  <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a>
+  <a href="https://github.com/vdarkobar/Home_Cloud#proxmox">Home</a> |
+  <a href="https://github.com/vdarkobar/Bitwarden#bitwarden">Bitwarden</a> |
+  <a href="https://github.com/vdarkobar/WordPress#wordpress">WordPress</a> |
+  <a href="https://github.com/vdarkobar/Ghost-blog">Ghost</a> |
+  <a href="https://github.com/vdarkobar/Portainer">Joomla</a>  
 </p>  
   
 Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>  and set domain or subdomain for your WordPress.
