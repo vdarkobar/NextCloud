@@ -134,4 +134,4 @@ http:
         replacement: "https://www.domain1/${1}"
 ```  
   
-Go to this page for additional <a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#slow-login-edit-overwritecliurl--">NextCloud</a> settings.
+Go to this page for additional <a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#edit-configphp-file">NextCloud</a> settings.
