@@ -97,7 +97,8 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`example.com`)"  # adjust domain or use subdomain (cloud.example.com)
+      rule: "Host(`cloud.example.com`)" # if using subdomain
+#      rule: "Host(`example.com`) || Host(`www.example.com`)" # if using domain, non-www to www-redirect
 
     # Collabora service router
     collabora-router:
@@ -105,7 +106,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`code.example.com`)" # adjust domain, subdomain already set to: office in docker-compose
+      rule: "Host(`code.example.com`)" # adjust domain, subdomain already set in office in docker-compose
 
 
   # All services:
@@ -124,6 +125,7 @@ http:
           - url: "http://local-ip:9980" # adjust ip and port nummber
           
 ```
+  
 ### Middlewares *(Traefik VM)*:
 Add to: *middlewares.yml* in Traefik: */data/configurations/* for non-www to www redirect (if domain name is used instead of subdomain).
 ```
