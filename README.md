@@ -9,7 +9,7 @@
   <br><br>
 </p>  
   
-Login to <a href="https://dash.cloudflare.com/">CloudFlare</a> and set domain name, or domain name and subdomain for your WordPress.
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a> and set Domain name, or Domain name and Subdomain for your WordPress.
 ```
     A | example.com | YOUR WAN IP
 ```
