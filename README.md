@@ -149,4 +149,4 @@ http:
         replacement: "https://www.example.com/${1}"
 ```  
   
-### Follow <a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#edit-configphp-file">this link</a> for additional NextCloud settings.
+### Follow <i><a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#edit-configphp-file">this link</a></i> for additional NextCloud settings.
