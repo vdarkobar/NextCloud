@@ -72,9 +72,9 @@ sudo chown -R root:root secrets/ && \
 rm README.md && \
 sudo chmod -R 600 secrets/
 ```
-#### *Change container names, if multiple instances are planed.*
   
 ### Start:
+*Change container names, if multiple instances are planed.*
 ```
 sudo docker-compose up -d
 ```
