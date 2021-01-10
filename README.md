@@ -103,8 +103,8 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`subdomain.example.com`)" # if using subdomain
-#      rule: "Host(`example.com`) || Host(`www.example.com`)" # if using domain name, to add non-www to www-redirect
+      rule: "Host(`subdomain.example.com`)" # comment out if using domain name
+#      rule: "Host(`example.com`) || Host(`www.example.com`)" # comment out if using subdomain, used for non-www to www redirect
 
     # Collabora service router
     collabora-router:
@@ -135,7 +135,7 @@ http:
 ### Middlewares *(Traefik VM)*:
 Add to: *middlewares.yml* in Traefik: */data/configurations/* for non-www to www redirect  
   
-* *If using domain name, to add non-www to www-redirect*
+* *If using domain name, used for non-www to www redirect*
 ```
 http:
 
