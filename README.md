@@ -65,9 +65,9 @@ sed -i "s|01|${TZONE}|" .env && \
 sed -i "s|02|${DNAME}|" .env && \
 sed -i "s|03|${SDNAME}|" .env && \
 sed -i "s|04|${LIP}|" .env && \
+sed -i "s|05|${CUNAME}|" .env && \
 sed -i "s|06|${NCPORTN}|" .env && \
 echo ${NCUNAME} > secrets/nc_admin_user.secret && \
-sed -i "s|05|${CUNAME}|" .env && \
 echo | openssl rand -base64 20 > secrets/nc_admin_password.secret && \
 TOKEN=$(openssl rand -base64 20); sed -i "s|CHANGE_PASS|${TOKEN}|" .env && \
 echo | openssl rand -base64 48 > secrets/mysql_root_password.secret && \
