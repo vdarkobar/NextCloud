@@ -13,7 +13,7 @@ secrets:
 services:
   db:
     image: mariadb:latest
-    container_name: nextcloud-db
+    container_name: nextcloud-db # change for multiple instances
     volumes:
       - ./nextcloud-db-data:/var/lib/mysql
     networks:
@@ -43,7 +43,7 @@ services:
       - redis
       - db
     image: nextcloud:stable 
-    container_name: nextcloud
+    container_name: nextcloud # change for multiple instances
     ports:
       - $NCPORTN:80
     secrets: 
@@ -77,7 +77,7 @@ services:
   # Connect NextCloud to Collabora app with: https://code.DOMAINNAME
   # Admin console at https://<office-domain>/loleaflet/dist/admin/admin.html
   code:
-    container_name: code
+    container_name: code # change for multiple instances
     image: collabora/code:latest
     restart: always
     networks:
