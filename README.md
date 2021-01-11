@@ -135,7 +135,7 @@ http:
 ### Middlewares *(Traefik VM)*:
 Add to: *middlewares.yml* in Traefik: */data/configurations/* for non-www to www redirect  
   
-* *If using domain name, used for non-www to www redirect*
+* *If using Domain name for NextCloud*
 ```
 http:
 
