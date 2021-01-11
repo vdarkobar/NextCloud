@@ -44,6 +44,7 @@ Domain name,
 Subdomain (if planned),
 Local IP Address,
 NextCloud Admin username,
+NextCloud Port Number,
 Collabora username.
 ```
   
