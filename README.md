@@ -48,6 +48,7 @@ Collabora username.
 ```
   
 ### Select and run all at once. Enter required data:
+*Only works once, on wrong data input delete folder and clone again*.
 
 ```
 clear
