@@ -127,13 +127,13 @@ http:
     nextcloud-service:
       loadBalancer:
         servers:
-          - url: "http://local-ip:8585" # adjust ip and port nummber
+          - url: "http://local-ip:NCPORTN" # adjust ip and port nummber
 
     # Collabora service
     collabora-service:
       loadBalancer:
         servers:
-          - url: "http://local-ip:9980" # adjust ip and port nummber
+          - url: "http://local-ip:9980" # adjust ip
           
 ```
   
