@@ -31,7 +31,7 @@ Add subdomain *code* for Collabora Office:
 sudo docker network create nc
 sudo docker network create db
 ```
-### Clone NextCloud git repository:
+### Clone NextCloud Git Repository:
 ```
 RED='\033[0;31m'; echo -ne "${RED}Enter directory name: "; read NAME; mkdir -p "$NAME"; \
 cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
