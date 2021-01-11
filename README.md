@@ -4,7 +4,7 @@
   <a href="https://github.com/vdarkobar/Home_Cloud#small-home-cloud">Home</a> |
   <a href="https://github.com/vdarkobar/Bitwarden#bitwarden">Bitwarden</a> |
   <a href="https://github.com/vdarkobar/WordPress#wordpress">WordPress</a> |
-  <a href="https://github.com/vdarkobar/Ghost-blog#ghost-blog">Ghost</a> |
+  <a href="https://github.com/vdarkobar/Ghost-blog#ghost-blog">Ghost-blog</a> |
   <a href="https://github.com/vdarkobar/Portainer">Joomla</a>  
   <br><br>
 </p>  
