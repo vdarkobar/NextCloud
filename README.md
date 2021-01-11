@@ -102,6 +102,7 @@ http:
     nextcloud-router:
       service: nextcloud-service
       middlewares:
+        - www-redirect@file # match the name from WWW-Redirect in middlewares.yml
       entryPoints:
         - "websecure"
       rule: "Host(`subdomain.example.com`)" # comment out if using domain name
@@ -144,7 +145,7 @@ http:
   middlewares:
   
     # WWW-Redirect
-    example-com-www-redirect: # any name
+    www-redirect: # match the name from NextCloud router in service_name.yml
       redirectRegex:
         regex: "^https://example.com/(.*)"
         replacement: "https://www.example.com/${1}"
