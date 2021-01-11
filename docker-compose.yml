@@ -45,7 +45,7 @@ services:
     image: nextcloud:stable 
     container_name: nextcloud
     ports:
-      - 8585:80
+      - $NCPORTN:80
     secrets: 
       - nc_mysql_password
       - nc_admin_user
