@@ -57,12 +57,12 @@ services:
       - db
     restart: always
 #    labels:  # uncomment labels only if on the same VM as Traefik (same Docker host)
-      #- "traefik.enable=true"
-      #- "traefik.docker.network=proxy"
-      #- "traefik.http.routers.nextcloud-secure.entrypoints=websecure"
-      #- "traefik.http.routers.nextcloud-secure.rule=Host(`$SUBDOMAIN$DOMAINNAME`)"
-      #- "traefik.http.routers.nextcloud-secure.service=nextcloud-service"
-      #- "traefik.http.services.nextcloud-service.loadbalancer.server.port=80"
+#      - "traefik.enable=true"
+#      - "traefik.docker.network=proxy"
+#      - "traefik.http.routers.nextcloud-secure.entrypoints=websecure"
+#      - "traefik.http.routers.nextcloud-secure.rule=Host(`$SUBDOMAIN$DOMAINNAME`)"
+#      - "traefik.http.routers.nextcloud-secure.service=nextcloud-service"
+#      - "traefik.http.services.nextcloud-service.loadbalancer.server.port=80"
     environment:
       - REDIS_HOST=redis
       - MYSQL_HOST=db:3306
