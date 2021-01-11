@@ -157,4 +157,6 @@ http:
 ### Follow <i><a href="https://github.com/vdarkobar/shared/blob/main/NextCloud.md#edit-configphp-file">this link</a></i> for additional NextCloud settings.  
   
 
+<p align="center">
 <a href="https://github.com/vdarkobar/NextCloud#nextcloud">top of the page</a>
+</p>
