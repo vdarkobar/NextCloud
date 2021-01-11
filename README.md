@@ -102,7 +102,7 @@ http:
     nextcloud-router:
       service: nextcloud-service
       middlewares:
-#        - www-redirect@file # uncomment and match the name from WWW-Redirect in middlewares.yml if using domain name only
+#        - www-redirect@file # Uncomment, give it a unique name. Set the same name in WWW-Redirect (middlewares.yml) if using domain name only.
       entryPoints:
         - "websecure"
       rule: "Host(`subdomain.example.com`)" # comment out if using domain name
