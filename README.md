@@ -48,10 +48,10 @@ Collabora username.
 ```
   
 ### Select and run all at once. Enter required data:
-*Only works once, use bash*
+
 ```
-RED='\033[0;31m'
 clear
+RED='\033[0;31m'
 echo -ne "${RED}Enter Time Zone: "; read TZONE; \
 echo -ne "${RED}Enter Domain name: "; read DNAME; \
 echo -ne "${RED}Enter Subdomain with . (dot) at the end, or just press Enter to default to Domain name: "; read SDNAME; \
