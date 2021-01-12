@@ -39,12 +39,9 @@ cd "$NAME" && git clone https://github.com/vdarkobar/NextCloud.git .
   
 #### *Decide what you will use for*:
 ```
-Time Zone,
-Domain name,
-Subdomain (if planned),
-Local IP Address,
-NextCloud Admin username,
-NextCloud Port Number,
+Domain name and Subdomain (if planned),
+Time Zone and Local IP Address,
+NextCloud Admin username nad Port Number,
 Collabora username.
 ```
   
