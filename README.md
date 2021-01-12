@@ -114,7 +114,7 @@ http:
       middlewares:
       entryPoints:
         - "websecure"
-      rule: "Host(`code.example.com`)" # adjust domain, subdomain already set in docker-compose.yml file
+      rule: "Host(`code.example.com`)" # adjust domain name, subdomain already set in docker-compose.yml file
 
 
   # All services:
@@ -147,7 +147,7 @@ http:
     # WWW-Redirect
     www-redirect: # match the name from NextCloud router in service_name.yml
       redirectRegex:
-        regex: "^https://example.com/(.*)"
+        regex: "^https://example.com/(.*)" # adjust domain name
         replacement: "https://www.example.com/${1}"
 ```  
   
